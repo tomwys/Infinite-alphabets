@@ -48,4 +48,17 @@ $L_3$ = ,,jakaś litera pojawia się dwukrotnie''
 $L_3 = {\bigcup \limits _{d \in D} D^*dD^*dD^*}$
 
 \section {Definicja niedeterministycznego automatu z rejestrami}
+Niedeterministyczny automat z rejestrami jest zadawany przez:
+\begin{itemize}
+\item skończony zbiór etykiet A
+\item skończony zbiór stanów Q
+\item stany początkowe i końcowe $I,F \in Q$
+\item skończony zbiór nazw rejestrów R
+\item relację zadającą przejścia automatu $\delta 
+\in Q x A x 2^R x Q x (R \cup \bot)$
+\end{itemize}
+
+Konfiguracją automatu jest $(q,r) \in Q x (R \rightharpoondown D)$.
+
+\paragraph {Należenie krotki $(q,a,r_1,r_3,p,r_4)$ do relacji przejścia automatu, należy rozumieć jako:} automat będąc w stanie q i czytając etykietę a oraz daną, która jest równa z rejestrami $r_1,r_3$ i nierówna z pozostałymi rejestrami, przechodzi do stanu p i zapisuje czytaną daną do rejestru $r_4$.
 \end{document}

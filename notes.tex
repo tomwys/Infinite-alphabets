@@ -17,12 +17,35 @@
 \chapter {Wykład I: wstęp do nieskończonych alfabetów}
 \section {Dlaczego warto badać nieskończone alfabety?}
 \section {Znane modele automatów dla słów}
+
+Większość wykładu dotycząca nieskończonych alfabetów będzie poświęcona modelom operującym na słowach. Decyzja taka wynika z faktu, że problemy dotyczące operacji na drzewach nie wpisują się w tematykę tego przedmiotu.
+
+Przez większość wykładu prezentowane modele będą rozważały jedynie równość elementów z nieskończonego alfabetu. Alfabet nie musi mieć zatem żadnej narzuconej struktury.
+
+Def. niech A będzie skończonym zbiorem ,,etykiet'', D - nieskończonym zbiorem danych. Wtedy strukturę $w \in (A x D)^*$ nazywamy ,,słowem z danymi''.
+
+Większość automatów używanych w trakcie wykładu, będzie operować na słowach w postaci zdefiniowanej powyżej.
+
+\subsection{Przykłady}
 \begin{figure}
 \begin{center}
 \includegraphics{images/podzial_automatow.png}
 \end{center}
 \caption{Moc wyrazu poszczególnych modeli}
 \end{figure}
+Na potrzeby przykładów przyjmujemy, że $ w \in D^* $
+
+$L_1$ = ,,pierwsza litera jest taka sama jak ostatnia litera''
+
+$L_1 = {\bigcup \limits _{d \in D} dD^*d + d}$
+
+$L_2$ = ,,pierwsza litera pojawia się ponownie''
+
+$L_2 = {\bigcup \limits _{d \in D} dD^*dD^*}$
+
+$L_3$ = ,,jakaś litera pojawia się dwukrotnie''
+
+$L_3 = {\bigcup \limits _{d \in D} D^*dD^*dD^*}$
 
 \section {Definicja niedeterministycznego automatu z rejestrami}
 \end{document}

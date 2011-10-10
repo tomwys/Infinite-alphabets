@@ -22,29 +22,42 @@ W dzisiejszych czasach bardzo popularnym formatem dokumentów stał się XML.
 Jest to format bardzo wygodny do zapisu drzew.
 Mając taki zapis, chcielibyśmy móc badać własności takiego dokumentu.
 
-Przykładowo, rozważmy prosty dokument HTML. Jest to drzewo o wierzchołkach etykietowanych pewnym alfabetem $ \mathbb{A} = \{body, p, tr, table, td, ... \}$.
-% RYSUNEK 1
+Przykładowo, rozważmy prosty dokument HTML.
+Jest to drzewo o wierzchołkach etykietowanych pewnym alfabetem $ \mathbb{A} = \{body, p, tr, table, td, ... \}$ (Rysunek \ref{html}).
+\begin{figure}
+\begin{center}
+\includegraphics{images/html.png}
+\end{center}
+\caption{Schemat dokumentu HTML}
+\label{html}
+\end{figure}
 
 Naturalną potrzebą jest zbadanie takich własności jak:
 \begin{itemize}
-\item Każdy element z etykietą tr ma rodzica etykietowanego table
+\item Każdy element z etykietą~tr ma rodzica etykietowanego table
 \item Korzeniem jest body
 \end{itemize}
 Do badania takich własności używa się automatów drzewowych.
 
 Jednak wiele własności dokumentów znika w użytej abstrakcji dokumentu.
-W szczególności nie bierzemy pod uwagę żadnych danych pojawiających się w dokumencie.
+W szczególności nie bierzemy pod uwagę żadnych danych pojawiających się w~dokumencie.
 
-Rozważmy więc następujący schemat dokumentu:
-%RYSUNEK 2
+Rozważmy więc następujący schemat dokumentu opisującego bibliotekę (rys. \ref{library}).
+\begin{figure}
+\begin{center}
+\includegraphics{images/library.png}
+\end{center}
+\caption{Biblioteka}
+\label{library}
+\end{figure}
 
-Część z jego etykiet pochodzi ze skończonego alfabetu (np. library, book, author), a część z nieskończonego (np. Tołstoj, 17).
+Część z~jego etykiet pochodzi ze skończonego alfabetu (np. library, book, author), a część z nieskończonego (np. Tołstoj, 17).
 W takim modelu możemy na przykład zadawać następujące własności:
 \begin{itemize}
 \item Każdy autor napisał jakąś książkę.
 \item Któryś autor napisał dwie książki.
 \end{itemize}
-Zauważmy, że nie są to właności, które można zbadać automatem skończonym. Aby je zbadać trzeba w jakiś sposób zapamiętać etykietę pochodzącą z nieskończonego zbioru, a do tego potrzeba nieskończonego zbioru stanów w tradycyjnym podejściu.
+Zauważmy, że nie są to właności, które można zbadać automatem skończonym. Aby je zbadać trzeba w~jakiś sposób zapamiętać etykietę pochodzącą z nieskończonego zbioru, a do tego potrzeba nieskończonego zbioru stanów w tradycyjnym podejściu.
 
 \section {Znane modele automatów dla słów}
 
